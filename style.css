@@ -1,0 +1,480 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --background-color: #efe7e5;
+    --text-color: black;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 5% 15%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+p {
+    line-height: 25px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1 span{
+    position:relative;
+    top: 4px;
+    
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+nav ul li{
+    margin-left: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+}
+nav ul li span{
+    position:absolute;
+    top: -5px;
+    right: -28px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+nav ul li::before {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #5a5a5a;
+    transition: 0.3s;
+
+}
+nav ul li:hover::before{
+    width: 100%;
+}
+
+
+header{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-left{
+flex: 12;
+margin-right: 50px;
+}
+
+header .header-left small{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header .header-left h1{
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+header .header-left .links{
+    margin-top: 80px;
+}
+header .header-left .links a{
+    text-decoration: none;
+    color: inherit;
+    position:relative;
+    margin-right: 40px;
+    font-weight: bold;
+}
+header .header-left .links a span{
+    position: absolute;
+    top: -5px;
+    right: -30px;
+}
+header .header-left .links a::before{
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #5a5a5a;
+    transition: 0.3s;
+}
+header .header-left .links a:hover::before{
+    width: 100%;
+}
+header .header-right{
+    flex: 5;
+    margin-right: 200px;
+}
+header .header-right img{
+    width: 200%;
+    border-radius: 200px;
+    height: auto;
+    
+}
+
+.about{
+    margin-top: 150px;
+}
+.about p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.about .signature{
+    width: 30%;
+    background-color: #efe7e5;
+}
+
+footer{
+    margin-top: 100px;
+}
+footer p{
+    font-size: 15px;
+}
+footer h3 span{
+    position: relative;
+    top:4px;
+}
+
+.inner{
+  padding-top: 20px;
+}
+
+.titre{
+  text-align: center;
+  color: var(--text-color);
+  padding: 1rem;
+  position: relative;
+}
+
+.titre:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  background-color: #2ecc71;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
+}
+
+.skill-box{
+  padding: 1rem;
+  color: black;
+  cursor: pointer;
+}
+
+.skill-box:hover > .skill-title:after,.skill-box:hover > .skill-title::before{
+width: 100px;
+}
+.skill-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.skill-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; /* Commence sans largeur */
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #2ecc71;
+  transition: width 0.5s ease; /* Transition uniquement sur la largeur */
+}
+
+.skill-title:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; /* Commence sans largeur */
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background-color: #2ecc71;
+  transition: width 0.5s ease; /* Transition uniquement sur la largeur */
+}
+.img{
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background: rgba(100,100 ,100, 0,5);
+  border-radius: 45px 0 0 45px;
+}
+
+.skill-title h3{
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
+
+.skill-icon{
+  width: 45px;
+  z-index: 2;
+}
+
+@media screen and (max-width:990px) {
+  header{
+      flex-direction: column-reverse;
+  }
+  header .header-left{
+      margin-right: 0;
+  }
+  header .header-right{
+      margin-bottom: 40px;
+  }
+  header .header-right img {
+      width: 250px;
+  }
+  .container{
+    grid-template-columns: repeat(2,1fr);
+    padding: 2rem 50px;
+  }
+}
+@media screen and (max-width:650px){
+  .container{
+    grid-template-columns: 1fr;
+  }
+}
+
+/*projet.html*/
+.projcard-container {
+    margin: 50px 0;
+    
+  }
+  
+  /* Actual Code: */
+  .projcard-container,
+  .projcard-container * {
+    box-sizing: border-box;
+  }
+  .projcard-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+  }
+  .projcard {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .projcard:hover {
+    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+    transform: translate(0px, -3px);
+  }
+  .projcard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 0.07;
+  }
+  .projcard:nth-child(2n)::before {
+    background-image: linear-gradient(-250deg, #424242, transparent 50%);
+  }
+  .projcard-innerbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .projcard-img {
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s ease;
+  }
+  .projcard:nth-child(2n) .projcard-img {
+    left: initial;
+    right: 0;
+  }
+  .projcard:hover .projcard-img {
+    transform: scale(1.05) rotate(1deg);
+  }
+  .projcard:hover .projcard-bar {
+    width: 70px;
+  }
+  .projcard-textbox {
+    position: absolute;
+    top: 7%;
+    bottom: 7%;
+    left: 430px;
+    width: calc(100% - 470px);
+    font-size: 17px;
+    
+  }
+  .projcard:nth-child(2n) .projcard-textbox {
+    left: initial;
+    right: 430px;
+  }
+  .projcard-textbox::before,
+  .projcard-textbox::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #ff0000bb;
+    background: #ffffff;
+    top: -20%;
+    left: -55px;
+    height: 140%;
+    width: 60px;
+    transform: rotate(8deg);
+  }
+  .projcard:nth-child(2n) .projcard-textbox::before {
+    display: none;
+  }
+  .projcard-textbox::after {
+    display: none;
+    left: initial;
+    right: -55px;
+  }
+  .projcard:nth-child(2n) .projcard-textbox::after {
+    display: block;
+  }
+  .projcard-textbox * {
+    position: relative;
+    
+  }
+  .projcard-title {
+    font-family: 'Voces', 'Open Sans', arial, sans-serif;
+    font-size: 24px;
+    color: black;
+  }
+  .projcard-subtitle {
+    font-family: 'Voces', 'Open Sans', arial, sans-serif;
+    color: #888;
+    
+  }
+  .projcard-bar {
+    left: -2px;
+    width: 50px;
+    height: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+  .projcard-blue .projcard-bar { background-color: #0088FF; }
+  .projcard-blue::before { background-image: linear-gradient(-70deg, #0088FF, transparent 50%); }
+  .projcard-blue:nth-child(2n)::before { background-image: linear-gradient(-250deg, #0088FF, transparent 50%); }
+  .projcard-red .projcard-bar { background-color: #D62F1F; }
+  .projcard-red::before { background-image: linear-gradient(-70deg, #D62F1F, transparent 50%); }
+  .projcard-red:nth-child(2n)::before { background-image: linear-gradient(-250deg, #D62F1F, transparent 50%); }
+  .projcard-customcolor .projcard-bar { background-color: var(--projcard-color); }
+  .projcard-customcolor::before { background-image: linear-gradient(-70deg, var(--projcard-color), transparent 50%); }
+  .projcard-customcolor:nth-child(2n)::before { background-image: linear-gradient(-250deg, var(--projcard-color), transparent 50%); }
+  .projcard-description {
+    z-index: 10;
+    font-size: 15px;
+    color: #424242;
+    height: 125px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .projcard-tagbox {
+    position: absolute;
+    bottom: 3%;
+    font-size: 14px;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+  }
+  .projcard-tag {
+    display: inline-block;
+    background: #E0E0E0;
+    color: #777;
+    border-radius: 3px 0 0 3px;
+    line-height: 26px;
+    padding: 0 10px 0 23px;
+    position: relative;
+    margin-right: 20px;
+    cursor: default;
+    user-select: none;
+    transition: color 0.2s;
+  }
+  .projcard-tag::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    height: 6px;
+    left: 10px;
+    width: 6px;
+    top: 10px;
+  }
+  .projcard-tag::after {
+    content: '';
+    position: absolute;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid #E0E0E0;
+    border-top: 13px solid transparent;
+    right: -10px;
+    top: 0;
+  }
+  /*projet.html avec la nav bar*/
